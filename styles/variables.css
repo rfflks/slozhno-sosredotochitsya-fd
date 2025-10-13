@@ -13,3 +13,8 @@
 .theme-light .header__rec{
   display: none;
 }
+
+
+.theme-light .decorated-zone::before, .theme-light .decorated-zone::after{
+  display: none;
+}
