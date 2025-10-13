@@ -120,3 +120,44 @@
   margin-left: 1px;
   margin-right: 1px;
 }
+
+.content-section{
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23.4px;
+}
+
+.content-section__title{
+  color: var(--accent-color);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.text-block__title{
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.text-block__content{
+  color: #F1B2CE;
+}
+
+.content{
+  display: grid;
+  gap: 50px;
+}
+
+.text-block__subtitle{
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-weight: 400;
+}
+
+.text-block{
+  display: grid;
+}
