@@ -177,8 +177,7 @@
   display: grid;
 }
 
-/*.text-block:nth-of-type(3){
-  word-spacing: px;
-  margin-top: 10px;
-}*/
+.text-block__content__causes{
+  word-spacing: 10px;
+}
 
