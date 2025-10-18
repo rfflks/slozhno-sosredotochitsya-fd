@@ -44,4 +44,6 @@
   display: none;
 }
 
-
+.theme-light .header__rec::after {
+  display: none;
+}
