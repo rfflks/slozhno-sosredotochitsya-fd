@@ -1,29 +1,49 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 :root.theme-light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
   --accent-color: var(--basic-pink);
   --title-color: var(--title-pink);
   --page-bg-color: var(--almost-white-bg);
   --header-text-bg-color: var(--basic-pink);
   --header-text-color: var(--almost-black);
-  --question-bg-color:  var(--almost-white-bg);
-  --question-color:  var(--almost-black);
+  --question-bg-color: var(--almost-white-bg);
+  --question-color: var(--almost-black);
   --answer-title-bg-color: var(--basic-pink);
   --answer-title-color: var(--almost-black);
   --answer-text-bg-color: var(--almost-white-bg);
   --answer-text-color: var(--almost-black);
-  --advice-title-bg-color:  var(--basic-pink) ;
+  --advice-title-bg-color: var(--basic-pink);
   --advice-title-color: var(--almost-black);
   --button-color: var(--almost-black);
-  --border-color-opacity: #32312D66;
-  --background-image:  url("../images/cover-image-light.png");
+  --border-color-opacity: #32312d66;
+  --bg-image: url("../images/cover-image-light.png");
   --deco-color: var(--almost-black);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --accent-color: var(--basic-pink);
+    --title-color: var(--title-pink);
+    --page-bg-color: var(--almost-white-bg);
+    --header-text-bg-color: var(--basic-pink);
+    --header-text-color: var(--almost-black);
+    --question-bg-color: var(--almost-white-bg);
+    --question-color: var(--almost-black);
+    --answer-title-bg-color: var(--basic-pink);
+    --answer-title-color: var(--almost-black);
+    --answer-text-bg-color: var(--almost-white-bg);
+    --answer-text-color: var(--almost-black);
+    --advice-title-bg-color: var(--basic-pink);
+    --advice-title-color: var(--almost-black);
+    --button-color: var(--almost-black);
+    --border-color-opacity: #32312d66;
+    --bg-image: url("../images/cover-image-light.png");
+    --deco-color: var(--almost-black);
+  }
+}
+
+.theme-light .header__rec::before {
+  display: none;
+}
+
+.theme-light .header__rec::after {
+  display: none;
 }

@@ -1,15 +1,31 @@
-/*
-  Специально для тёмной темы при наличии класса,
-  здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 :root.theme-dark {
+  --page-bg-color: var(--approximately-black);
+  --accent-color: var(--red);
+  --title-color: #db00ff;
+  --header-text-bg-color: var(--accent-color);
+  --header-text-color: var(--approximately-black);
+  --question-bg-color: var(--approximately-black);
+  --question-color: var(--accent-color);
+  --answer-title-bg-color: var(--accent-color);
+  --answer-title-color: var(--approximately-black);
+  --answer-text-bg-color: var(--approximately-black);
+  --answer-text-color: #f1b2ce;
+  --advice-title-bg-color: var(--accent-color);
+  --advice-title-color: var(--approximately-black);
+  --button-color: var(--accent-color);
+  --rec-color: var(--accent-color);
+  --border-color-opacity: #ff007066;
+  --bg-image: url("../images/cover-image-dark.png");
+  --deco-color: var(--accent-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
     --page-bg-color: var(--approximately-black);
     --accent-color: var(--red);
-    --title-color:  #db00ff;
+    --title-color: #db00ff;
     --header-text-bg-color: var(--accent-color);
-    --header_text-color: var(--approximately-black);
+    --header-text-color: var(--approximately-black);
     --question-bg-color: var(--approximately-black);
     --question-color: var(--accent-color);
     --answer-title-bg-color: var(--accent-color);
@@ -20,38 +36,15 @@
     --advice-title-color: var(--approximately-black);
     --button-color: var(--accent-color);
     --rec-color: var(--accent-color);
-    --border-color-opacity: #FF007066;
-    --background-image:  url("../images/cover-image-dark.png");
+    --border-color-opacity: #ff007066;
+    --bg-image: url("../images/cover-image-dark.png");
     --deco-color: var(--accent-color);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --page-bg-color: var(--approximately-black);
-    --accent-color: var(--real-red);
-    --title-color:  #db00ff;
-    --header-text-bg-color: var(--real-red);
-    --header-text-color: var(--approximately-black);
-    --question-bg-color: var(--approximately-black);
-    --question-color: var(--real-red);
-    --answer-title-bg-color: var(--real-red);
-    --answer-title-color: var(--approximately-black);
-    --answer-text-bg-color: var(--approximately-black);
-    --answer-text-color: #f1b2ce;
-    --advice-title-bg-color: var(--real-red);
-    --advice-title-color: var(--approximately-black);
-    --button-color: var(--real-red);
-    --rec-color: var(--real-red);
-    --border-color-opacity: #FF007066;
-    --border-color-opacity: #FF007066;
-    --background-image:  url("../images/cover-image-dark.png");
-    --deco-color: var(--real-red);
   }
 
   .header__rec::before {
     display: inline-block;
   }
-  
+
   .header__rec::after {
     display: inline-block;
   }

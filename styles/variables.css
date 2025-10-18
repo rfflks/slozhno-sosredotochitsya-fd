@@ -1,34 +1,21 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
 :root {
-  --basic-pink: #FF8DCB;
-  --title-pink: #FFC2E6;
-  --almost-white-bg: #FFF1F7;
+  --basic-pink: #ff8dcb;
+  --title-pink: #ffc2e6;
+  --almost-white-bg: #fff1f7;
   --color-text-header: #ff0070;
   --red: #ff0070;
   --bg-image: url(../images/cover-image-dark.png);
   --bg-color: #000028;
   --approximately-black: #000028;
   --almost-black: #353430;
+
   --regular-font-size: 18px;
   --regular-line-height: 100%;
   --regular-gap: 10px;
-  --decoration-gap: clamp(10px , 2.65vw , 20px);
+  --decoration-gap: clamp(10px, 2.65vw, 20px);
   --min-height: 668px;
-  --header-margin-left: min(10px , 20px - 2.6vw);
+  --header-margin-left: min(10px, 20px - 2.6vw);
   --section-child-margin: 40px;
   --font-family: "IBM Plex Mono", sans-serif;
   --corner-thickness: 1px;
-}
-
-
-.theme-light .header__rec{
-  display: none;
-}
-
-
-.theme-light .decorated-zone::before, .theme-light .decorated-zone::after{
-  display: none;
 }
