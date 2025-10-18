@@ -1,1 +1,0 @@
-https://github.com/rfflks/slozhno-sosredotochitsya-fd.git
