@@ -16,6 +16,6 @@
   --min-height: 668px;
   --header-margin-left: min(10px, 20px - 2.6vw);
   --section-child-margin: 40px;
-  --font-family: "IBM Plex Mono", sans-serif;
+  --font-family: "IBM Plex Mono", monospace, sans-serif;
   --corner-thickness: 1px;
 }
