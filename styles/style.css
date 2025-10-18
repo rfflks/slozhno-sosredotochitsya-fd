@@ -2,32 +2,79 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-  background-image: var(--bg-image);
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
+  font-family: var(--font-family);
+  font-weight: bold;
+  font-size: var(--regular-font-size);
+  line-height: 1.3;
   background-color: var(--bg-color);
-  height: 100vh;
+  background-attachment: fixed;
+  background-image: var(--bg-image);
+  background-size: cover;
 }
 
 .header {
   display: grid;
+  height: 100vh;
+  grid-template-rows: 1fr min-content 1fr;
+  padding: var(--decoration-gap) 0;
   grid-template-columns: 1fr;
-  min-block-size: 668px;
-  font-family: "IBM Plex Mono", sans-serif;
+  min-height: 668px;
+  font: inherit;
+  position: relative;
   font-size: 18px;
   font-weight: 400;
+  align-items: center;
 }
 
-.decorated-zone::after {
+.header__rec {
+  display: flex;
+  justify-self: end;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  line-height: 25px;
+  position: absolute;
+  width: 10px;
+  top: calc( var(--decoration-gap) - 10px) ;
+  right: calc( var(--decoration-gap) + 50px);
+}
+
+.header__rec::before{
+  content: "REC";
+  font-weight: normal;
+  display: none;
+  color: var(--accent-color);
+  margin-top: 10px;
+  margin-right: 15px;
+}
+
+.header__rec::after {
   content: " ";
   position: absolute;
-  width: 25px;
-  height: 25px;
-  border-bottom: 1px solid var(--color-text-header);
-  border-left: 1px solid var(--color-text-header);
-  margin-block-start: 625px;
-  margin-inline-start: 1px;
+  display: none;
+  inline-size: 9px;
+  block-size: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  margin-left: 42px;
+  margin-top: 18px;
+  box-shadow: 0 0 4px 2px var(--accent-color);
+}
+
+.header__title{
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 0.825;
+  text-shadow: 4px 4px 0 var(--accent-color);
+  color: var(--title-color);
+  margin-left: var(--header-margin-left);
+}
+
+.header__text{
+  background-color: var(--header-text-bg-color);
+  color: var(--header-text-color);
+  font-weight: bold;
+  font-size: inherit;
+  margin: var(--decoration-gap);
+  font: inherit;
 }
 
 .decorated-zone::before {
@@ -35,73 +82,40 @@
   position: absolute;
   width: 25px;
   height: 25px;
-  border-top: 1px solid var(--color-text-header);
-  border-right: 1px solid var(--color-text-header);
-  margin-block-start: 1px;
-  margin-inline-start: 331px;
+  border-bottom: var(--corner-thickness) solid var(--deco-color);
+  border-left: var(--corner-thickness) solid var(--deco-color);
+  left: var(--decoration-gap);
+  bottom: var(--decoration-gap);
 }
 
-.header__rec {
-  display: flex;
-  color: var(--color-text-header);
-  position: absolute;
-  justify-self: end;
-  margin: 5px 12px 0 0;
-}
-
-.header__rec::after {
+.decorated-zone::after {
   content: " ";
-  width: 9px;
-  height: 9px;
-  margin-left: 5px;
-  margin-top: 4px;
-  background: #ff0070;
-  border-radius: 50%;
-}
-
-.header__title {
-  font-weight: 700;
-  line-height: 95px;
-  padding-top: 14px;
-  margin: 0;
-  grid-column-start: 1;
-  color: #db00ff;
-  align-self: start;
-  text-shadow: 4px 4px 0 var(--accent-color);
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-}
-
-.header__title__second__word {
-  margin-left: 20px;
-  letter-spacing: 5px;
-}
-
-.header__theme-menu {
-  grid-row-start: 1;
-  justify-self: end;
-}
-
-.header__theme-menu {
-  margin-left: 248px;
-  margin-top: 49px;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-top: var(--corner-thickness) solid var(--deco-color);
+  border-right: var(--corner-thickness) solid var(--deco-color);
+  top: var(--decoration-gap);
+  right: var(--decoration-gap);
 }
 
 .header__theme-menu-list {
-  display: flex;
-  list-style: none;
-  gap: 13px;
-  align-items: center;
-  margin-right: 5px;
-  flex-direction: column;
+  display: grid;
+  gap: 10px;
+  justify-content: end;
+  padding-right: 10px;
+
 }
 
 .header__theme-menu-button {
-  color: var(--color-text-header);
-  background-color: transparent;
+  padding: 4px 13px;
+  background-color: inherit;
   border: none;
-  font-size: 18px;
-  font-family: "IBM Plex Mono", sans-serif;
+  font-size: var(--regular-font-size);
+  line-height: var(--regular-line-height);
   text-transform: lowercase;
+  color: var(--button-color);
+  cursor: pointer;
 }
 
 .header__theme-menu-button_active{
@@ -109,75 +123,22 @@
   padding: 1.5px 13px 1.5px 13px;
 }
 
-.title-decor{
-  font-weight: 700;
-  line-height: 23.4px;
-  background-color: var(--accent-color);
-  color:var(--bg-color);
-  max-height: 117px;
-  min-width: 355px;
-  margin-bottom: 36px;
-  margin-left: 1px;
-  margin-right: 1px;
+.header__theme-menu-button_active {
+  pointer-events: none;
+  border: 1px solid var(--button-color);
 }
 
-.content-section{
-  font-family: "IBM Plex Mono", sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 23.4px;
+.header__theme-menu-button:focus-visible {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--button-color);
 }
 
-.content-section__title{
-  color: var(--accent-color);
-  font-size: 18px;
-  margin-bottom: 0px;
-  margin-top: 0px;
-  font-weight: 700;
-  max-width: 330px;
+.header__theme-menu-button:hover:not(.header__theme-menu-button_active) {
+  border: 1px solid var(--border-color-opacity);
 }
 
-.text-block__title{
-  background-color: var(--accent-color);
-  color: var(--bg-color);
-  display: flex;
-  font-weight: 700;
-  font-size: 18px;
-  margin: 20px 1px 10px 1px;
-}
-
-.text-block__content{
-  color: #F1B2CE;
-  font-size: 18px;
-  font-weight: 400;
-  margin: 0px;
-  word-spacing: 12px;
-}
-
-.text-shadow{
-  text-shadow: 2px 2px 0 var(--accent-color);
-}
-
-.content{
-  display: grid;
-  margin-block-start: 32px;
-  gap: 50px;
-}
-
-.text-block__subtitle{
-  background-color: var(--accent-color);
-  color: var(--bg-color);
-  margin-bottom: 10px;
-  margin-top: 10px;
-  font-weight: 400;
-}
-
-.text-block{
-  display: grid;
-}
-
-.text-block__content__causes{
-  word-spacing: 10px;
+.header__theme-menu-button:focus {
+  outline: none;
 }
 
