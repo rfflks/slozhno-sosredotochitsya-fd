@@ -434,4 +434,9 @@
   .content__section__advices {
     gap: 10px;
   }
+
+  .footer__title{
+    font-size: 157px;
+  }
+
 }
